@@ -12,6 +12,12 @@ puts "pulling data from api"
 api_data = JSON.parse(open(url).read)
 api_data["drinks"].each do |ingredient|
   puts "creating #{ingredient}"
-  Ingredient.create!(name: ingredient["strIngredient1"])
+  Ingredient.create(name: ingredient["strIngredient1"])
 end
 puts "done"
+
+
+
+Cocktail.create(name: "mojito")
+Cocktail.create(name: "bloody mary")
+Cocktail.create(name: "pina colada")

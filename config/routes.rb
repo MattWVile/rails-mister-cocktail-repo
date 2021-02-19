@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 # A user can see the list of cocktails
 root to: "cocktails#index"
 resources :cocktails, only: [:index, :new,:show,:create]
+
 # A user can see the details of a given cocktail, with the dose needed for each ingredient
 # GET "cocktails/42"
 # A user can create a new cocktail
